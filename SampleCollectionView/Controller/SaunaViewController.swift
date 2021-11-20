@@ -29,6 +29,7 @@ final class SaunaViewController: UIViewController {
     
     func setupCollectionView() {
         collectionView.dataSource = self
+        collectionView.delegate = self
         
         let nib = UINib(nibName: SaunaCollectionViewCell.className, bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: SaunaCollectionViewCell.className)
@@ -49,5 +50,14 @@ extension SaunaViewController: UICollectionViewDataSource {
         let name = saunaNameList[indexPath.row]
         cell.setupSaunaNameLabel(name: name)
         return cell
+    }
+}
+
+extension SaunaViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: CellTapViewController.className, bundle: nil)
+        guard let vc = storyboard.instantiateViewController(identifier: CellTapViewController.className) as? CellTapViewController else { return }
+        vc.saunaName = saunaNameList[indexPath.row]
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
