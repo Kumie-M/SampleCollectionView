@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		446119CF270D414000C31F3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446119CE270D414000C31F3C /* AppDelegate.swift */; };
 		446119D1270D414000C31F3C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446119D0270D414000C31F3C /* SceneDelegate.swift */; };
-		446119D3270D414000C31F3C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446119D2270D414000C31F3C /* ViewController.swift */; };
+		446119D3270D414000C31F3C /* SaunaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446119D2270D414000C31F3C /* SaunaViewController.swift */; };
 		446119D6270D414000C31F3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 446119D4270D414000C31F3C /* Main.storyboard */; };
 		446119D8270D414400C31F3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 446119D7270D414400C31F3C /* Assets.xcassets */; };
 		446119DB270D414400C31F3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 446119D9270D414400C31F3C /* LaunchScreen.storyboard */; };
 		446119E6270D414400C31F3C /* SampleCollectionViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446119E5270D414400C31F3C /* SampleCollectionViewTests.swift */; };
 		446119F1270D414400C31F3C /* SampleCollectionViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446119F0270D414400C31F3C /* SampleCollectionViewUITests.swift */; };
+		44B51F282748AF1C006EDA54 /* NSObject+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B51F272748AF1C006EDA54 /* NSObject+.swift */; };
+		44B51F2C2748AF7C006EDA54 /* SaunaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B51F2A2748AF7C006EDA54 /* SaunaCollectionViewCell.swift */; };
+		44B51F2D2748AF7C006EDA54 /* SaunaCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44B51F2B2748AF7C006EDA54 /* SaunaCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +41,7 @@
 		446119CB270D414000C31F3C /* SampleCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		446119CE270D414000C31F3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		446119D0270D414000C31F3C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		446119D2270D414000C31F3C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		446119D2270D414000C31F3C /* SaunaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaunaViewController.swift; sourceTree = "<group>"; };
 		446119D5270D414000C31F3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		446119D7270D414400C31F3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		446119DA270D414400C31F3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +52,9 @@
 		446119EC270D414400C31F3C /* SampleCollectionViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleCollectionViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		446119F0270D414400C31F3C /* SampleCollectionViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCollectionViewUITests.swift; sourceTree = "<group>"; };
 		446119F2270D414400C31F3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44B51F272748AF1C006EDA54 /* NSObject+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "NSObject+.swift"; path = "../../../NSObject+.swift"; sourceTree = "<group>"; };
+		44B51F2A2748AF7C006EDA54 /* SaunaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SaunaCollectionViewCell.swift; path = ../../../SaunaCollectionViewCell.swift; sourceTree = "<group>"; };
+		44B51F2B2748AF7C006EDA54 /* SaunaCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SaunaCollectionViewCell.xib; path = ../../../SaunaCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +105,11 @@
 		446119CD270D414000C31F3C /* SampleCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				44B51F292748AF5B006EDA54 /* View */,
+				44B51F262748AF08006EDA54 /* Extensions */,
 				446119CE270D414000C31F3C /* AppDelegate.swift */,
 				446119D0270D414000C31F3C /* SceneDelegate.swift */,
-				446119D2270D414000C31F3C /* ViewController.swift */,
+				446119D2270D414000C31F3C /* SaunaViewController.swift */,
 				446119D4270D414000C31F3C /* Main.storyboard */,
 				446119D7270D414400C31F3C /* Assets.xcassets */,
 				446119D9270D414400C31F3C /* LaunchScreen.storyboard */,
@@ -126,6 +134,23 @@
 				446119F2270D414400C31F3C /* Info.plist */,
 			);
 			path = SampleCollectionViewUITests;
+			sourceTree = "<group>";
+		};
+		44B51F262748AF08006EDA54 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				44B51F272748AF1C006EDA54 /* NSObject+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		44B51F292748AF5B006EDA54 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				44B51F2A2748AF7C006EDA54 /* SaunaCollectionViewCell.swift */,
+				44B51F2B2748AF7C006EDA54 /* SaunaCollectionViewCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +259,7 @@
 				446119DB270D414400C31F3C /* LaunchScreen.storyboard in Resources */,
 				446119D8270D414400C31F3C /* Assets.xcassets in Resources */,
 				446119D6270D414000C31F3C /* Main.storyboard in Resources */,
+				44B51F2D2748AF7C006EDA54 /* SaunaCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +284,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				446119D3270D414000C31F3C /* ViewController.swift in Sources */,
+				446119D3270D414000C31F3C /* SaunaViewController.swift in Sources */,
+				44B51F282748AF1C006EDA54 /* NSObject+.swift in Sources */,
+				44B51F2C2748AF7C006EDA54 /* SaunaCollectionViewCell.swift in Sources */,
 				446119CF270D414000C31F3C /* AppDelegate.swift in Sources */,
 				446119D1270D414000C31F3C /* SceneDelegate.swift in Sources */,
 			);
