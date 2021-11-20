@@ -49,15 +49,18 @@ extension SaunaViewController: UICollectionViewDataSource {
             return SaunaCollectionViewCell() }
         let name = saunaNameList[indexPath.row]
         cell.setupSaunaNameLabel(name: name)
+        
+        cell.locationBlock = { [weak self] in
+            guard let self = self else { return }
+            self.transition(viewControllerName: ButtonTapViewController.className)
+        }
         return cell
     }
 }
 
+
 extension SaunaViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let storyboard = UIStoryboard(name: CellTapViewController.className, bundle: nil)
-        guard let vc = storyboard.instantiateViewController(identifier: CellTapViewController.className) as? CellTapViewController else { return }
-        vc.saunaName = saunaNameList[indexPath.row]
-        self.navigationController?.pushViewController(vc, animated: true)
+        transition(viewControllerName: CellTapViewController.className)
     }
 }

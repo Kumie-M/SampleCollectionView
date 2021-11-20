@@ -9,12 +9,12 @@ import UIKit
 
 final class CellTapViewController: UIViewController {
     
-    var saunaName: String?
+//    var saunaName: String?
     
     @IBOutlet private weak var saunaNameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        saunaNameLabel.text = saunaName
+//        saunaNameLabel.text = saunaName
     }
 }
